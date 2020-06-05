@@ -1,0 +1,19 @@
+virtualenv:
+    dir: login2fa
+    name: api
+    pips: pymongo pycnic gunicorn pyyaml password-strength pyotp
+socket:
+    bind: 0.0.0.0
+    port: 8580
+password_strength:
+    length: 8       # min length
+    uppercase: 1    # need min. uppercase letters
+    numbers: 1      # need min. digits
+    special: 2      # need min. special characters
+2fa: True
+session:
+    hash_secret: SECRET
+dbs:
+    mongo:
+        host: mongodb://x.x.x.x
+        db: testing
